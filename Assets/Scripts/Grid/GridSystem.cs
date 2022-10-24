@@ -14,7 +14,7 @@ public class GridSystem : MonoBehaviour
  
     private Dictionary<Vector2, TileScript> _tiles;
  
-    void Start() 
+    void Awake() 
     {
         GenerateGrid();
     }
