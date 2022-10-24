@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &34870946
 RectTransform:
   m_ObjectHideFlags: 0
@@ -385,7 +385,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2100239577}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &53356245
 MonoBehaviour:
@@ -629,7 +641,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 381361713}
+      - m_Target: {fileID: 34870945}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2154,7 +2166,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2100239577}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SetControllerSens
+        m_MethodName: SetBrightness
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2259,7 +2271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &398310945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2283,7 +2295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: -0.46593}
   m_SizeDelta: {x: 1920, y: 906}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &398310946
@@ -2841,8 +2853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -605.8551, y: -0.0020752}
-  m_SizeDelta: {x: 450.2899, y: 905.06}
+  m_AnchoredPosition: {x: -605.86, y: -0.0000027418}
+  m_SizeDelta: {x: 450.2899, y: 906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432624927
 MonoBehaviour:
@@ -3311,7 +3323,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2100239577}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GameplayApply
+        m_MethodName: GraphicsApply
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3762,7 +3774,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2100239577}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: SetQuality
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &665262054
 MonoBehaviour:
@@ -3970,8 +3994,8 @@ RectTransform:
   m_Father: {fileID: 891279346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4921,7 +4945,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2100239577}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: SetFullScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &809814015
 GameObject:
@@ -6544,7 +6580,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gameplay
+          m_StringArgument: Graphics
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1085094854
@@ -8308,7 +8344,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9504,7 +9540,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2100239577}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GameplayApply
+        m_MethodName: GraphicsApply
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12264,12 +12300,15 @@ MonoBehaviour:
   _defaultSens: 4
   MainControllerSens: 4
   _invertYToggle: {fileID: 598530704}
-  _brightnessSlider: {fileID: 0}
-  _brightnessTextValue: {fileID: 0}
+  _brightnessSlider: {fileID: 374916330}
+  _brightnessTextValue: {fileID: 100015076}
   _DefaultBrightness: 1
+  _qualityDropdown: {fileID: 665262053}
+  _fullscreenToggle: {fileID: 790922136}
   _confirmationPrompt: {fileID: 835279284}
   NewGameLevel: Level1
   _noSavedGameDialog: {fileID: 1863184154}
+  ResolutionDropDown: {fileID: 53356244}
 --- !u!4 &2100239578
 Transform:
   m_ObjectHideFlags: 0
