@@ -75,7 +75,7 @@ public class PlaceObjectOnGrid : MonoBehaviour
             {
                 Vector3 worldPosition = new Vector3(x:i, y:0, z:j);
                 Transform obj = Instantiate(gridCellPrefab, worldPosition, Quaternion.identity);
-                obj.name = "Cell" + name;
+                obj.name = $"Tile {i} {j}";
                 nodes[i,j] = new Node(isPlaceable: true, worldPosition, obj);
                 name++;
             }
