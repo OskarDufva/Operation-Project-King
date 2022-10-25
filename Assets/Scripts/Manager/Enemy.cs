@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wpoints = gameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
+        wpoints = GameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
         currentHealth = maxHealth;
 
     }
