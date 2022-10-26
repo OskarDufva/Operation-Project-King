@@ -7,13 +7,13 @@ public struct WaveList
 {
     public string WaveName;
     public EnemyData[] Enemies;
-    public float rate;
+    //public float rate;
 }
 
 [System.Serializable]
 public struct EnemyData
 {
-    public GameObject[] Enemies;
+    public GameObject Enemy;
     public float SpawnDelay;
     public int AmountOfEnemies;
 }

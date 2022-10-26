@@ -1,76 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Wave : MonoBehaviour
 {
     public Transform SpawnPoint;
     public GameManager gameManager;
     public static int EnemiesAlive = 0;
-    public float TimeBetweenWaves = 5f;
-    public float Countdown;
-    private int waveIndex = 0;
     public WaveList[] _waveList;
-    public EnemyData _enemyData;
     
 
 
     void Start()
     {
-
+        SpawnWave(0);
     }
 
     void Update()
     {
-        if (EnemiesAlive > 0)
-        {
-            return;
-        }
-
-        if(waveIndex == _waveList.Length)
-        {
-            gameManager.WinLevel();
-            this.enabled = false;
-        }
-
-        if(Countdown <= 0f)
-        {
-            StartCoroutine(SpawnWave());
-            Countdown = TimeBetweenWaves;
-            return;
-        }
-
-        Countdown -= Time.deltaTime;
 
     }
 
-    IEnumerator SpawnWave()
+    private void SpawnWave(int waveCount)
     {
-        WaveList wave = _waveList[waveIndex];
-        EnemyData enemy = _enemyData;
-
-        EnemiesAlive = enemy.AmountOfEnemies;
-
-        for (int i = 0; i < enemy.AmountOfEnemies; i++)
-        {
-            SpawnEnemy(enemy.AmountOfEnemies);
-            yield return new WaitForSeconds(1f/wave.rate);
-        }
-
-    }
-    private void SpawnEnemy(int waveCount)
-    {
-        WaveSpawn(_waveList[waveCount]);
+        var x = WaveSpawn(_waveList[waveCount]);
+        StartCoroutine(x);
     }
 
-    public void WaveSpawn(WaveList EnemyData)
+    IEnumerator WaveSpawn(WaveList EnemyData)
     {
         for (int i = 0; i < EnemyData.Enemies.Length; i++)
         {
+            
             Debug.Log(EnemyData.Enemies[i]);
+
+            for (int g = 0; g < EnemyData.Enemies[i].AmountOfEnemies; g++)
+            {
+                
+                Instantiate(EnemyData.Enemies[i].Enemy, SpawnPoint.transform.position, Quaternion.identity);
+                yield return new WaitForSeconds(EnemyData.Enemies[i].SpawnDelay);
+            }
+            
         }
     }
-
-
 }
