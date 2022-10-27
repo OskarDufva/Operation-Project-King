@@ -10,9 +10,12 @@ public class EnemyMovement : MonoBehaviour
 
     private int wavepointIndex = 0;
 
+    private Wave _waveManager;
+
     void Start ()
     {
         target = Waypoints.points[0];
+        _waveManager = FindObjectOfType<Wave>();
     }
 
     void Update ()
@@ -32,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(gameObject);
             return;
+            _waveManager.EnemyDeath();
         }
 
         wavepointIndex++;
