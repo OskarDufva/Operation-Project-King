@@ -6,22 +6,30 @@ public class Wave : MonoBehaviour
 {
     public Transform SpawnPoint;
     public GameManager gameManager;
-    public static int EnemiesAlive = 0;
+    public int EnemiesAlive = 0;
     public WaveList[] _waveList;
-    
 
-
-    void Start()
-    {
-        SpawnWave(0);
-    }
-
-    void Update()
+    private void Start()
     {
 
     }
 
-    private void SpawnWave(int waveCount)
+    public int WaveAmountCounter()
+    {
+        return _waveList.Length;
+    }
+    //counts every enemy we spawn to keep track of the spanwed enemies.
+    public void EnemyCounter()
+    {
+        EnemiesAlive++;
+    }
+    //Call this everytime an enemy dies to reduce the counter so we know when all enemies have died
+    public void EnemyDeath()
+    {
+        EnemiesAlive--;
+    }
+
+    public void SpawnWave(int waveCount)
     {
         var x = WaveSpawn(_waveList[waveCount]);
         StartCoroutine(x);
@@ -31,15 +39,13 @@ public class Wave : MonoBehaviour
     {
         for (int i = 0; i < EnemyData.Enemies.Length; i++)
         {
-            
-            Debug.Log(EnemyData.Enemies[i]);
-
             for (int g = 0; g < EnemyData.Enemies[i].AmountOfEnemies; g++)
             {
-                
-                Instantiate(EnemyData.Enemies[i].Enemy, SpawnPoint.transform.position, Quaternion.identity);
                 yield return new WaitForSeconds(EnemyData.Enemies[i].SpawnDelay);
+                Instantiate(EnemyData.Enemies[i].Enemy, SpawnPoint.transform.position, Quaternion.identity);
+                EnemyCounter();
             }
+            yield return new WaitForSeconds(EnemyData.Enemies[i].BreakTime);
             
         }
     }
