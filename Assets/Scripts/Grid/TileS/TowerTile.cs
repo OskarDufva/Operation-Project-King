@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileScript : MonoBehaviour
+public class TowerTile : TileScript
 {
     [SerializeField] private Color _baseColor, _offsetColor;
-    [SerializeField] private MeshRenderer _renderer;
     [SerializeField] private GameObject _highlight;
- 
-    public void Init(bool isOffset) 
+
+    public override void Init(int x, int y) 
     {
+        var isOffset = (x + y) % 2 == 1;
         _renderer.material.color = isOffset ? _offsetColor : _baseColor;
     }
  
