@@ -33,9 +33,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (wavepointIndex >= Waypoints.points.Length - 1)
         {
+            _waveManager.EnemyDeath();
             Destroy(gameObject);
             return;
-            _waveManager.EnemyDeath();
         }
 
         wavepointIndex++;
