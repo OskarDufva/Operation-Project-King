@@ -5,13 +5,13 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
     public Transform SpawnPoint;
-    public GameManager gameManager;
+    public GameManager GameManager;
     public int EnemiesAlive = 0;
     public WaveList[] _waveList;
 
     private void Start()
     {
-
+        GameManager = FindObjectOfType<GameManager>();
     }
 
     public int WaveAmountCounter()
