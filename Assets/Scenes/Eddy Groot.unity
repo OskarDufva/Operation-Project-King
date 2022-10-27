@@ -1705,6 +1705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bdb26fe74bddd48af8b1f667836c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waveTxt: {fileID: 952694303}
 --- !u!4 &1645866053
 Transform:
   m_ObjectHideFlags: 0
@@ -2158,8 +2159,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 466322580}
   gameManager: {fileID: 1645866052}
+  EnemiesAlive: 0
   _waveList:
   - WaveName: wave 1
+    Enemies:
+    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
+      SpawnDelay: 1
+      AmountOfEnemies: 4
+      BreakTime: 0
+    - Enemy: {fileID: 2198106561285086546, guid: 0507381dbe2518d4a9bbec27fd78522d, type: 3}
+      SpawnDelay: 3
+      AmountOfEnemies: 1
+      BreakTime: 10
+    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
+      SpawnDelay: 1
+      AmountOfEnemies: 5
+      BreakTime: 0
+  - WaveName: wave 2
     Enemies:
     - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
       SpawnDelay: 1

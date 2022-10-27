@@ -18,10 +18,3 @@ public struct EnemyData
     public int AmountOfEnemies;
     public float BreakTime;
 }
-
-[System.Serializable]
-public struct RandomSpawn
-{
-    public float MinSpawn;
-    public float MaxSpawn;
-}
