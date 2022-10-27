@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2198106561285086559}
   - component: {fileID: 2198106561285086544}
   - component: {fileID: 8027318880321703243}
-  - component: {fileID: -4875097432688807704}
   - component: {fileID: 4678591296438375421}
   m_Layer: 0
   m_Name: Knight
@@ -116,18 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4875097432688807704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198106561285086546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16a16bb6ed2f0346a46515f3c46bda6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4678591296438375421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +130,14 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   damageDealt: 0
+  worth: 0
+--- !u!1029 &102900000
+DefaultAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Knight
+  m_Message: .prefab file is not a prefab. There are no GameObjects in the file.
+    Did you give the asset the wrong extension?
+  m_IsWarning: 1
