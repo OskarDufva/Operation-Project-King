@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float maxHealth;
+    public float maxHealth = 100;
     public float currentHealth;
 
-    public float damage = 20f;
+    public int damageDealt;
+
+    public int worth;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        maxHealth = currentHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (currentHealth < 0)
+        {
+            Die();
+            Debug.Log("EnemyDead");
+        }
+    }
+
+    void Die()
+    {
+        //CurrencySystem.Gold += worth;
     }
 
 }

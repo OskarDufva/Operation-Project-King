@@ -18,7 +18,7 @@ public class King : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("Dead");
+            Debug.Log("GameOver");
             //GameOver();   
         }
     }
@@ -27,7 +27,7 @@ public class King : MonoBehaviour
         Enemy Enemy = collision.gameObject.GetComponent<Enemy>();
         if (Enemy != null)
         {
-            TakeDamage(20);
+            TakeDamage(Enemy.damageDealt);
         }
     }
 
