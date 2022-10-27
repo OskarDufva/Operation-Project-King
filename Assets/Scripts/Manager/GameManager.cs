@@ -7,26 +7,29 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] TMP_Text _waveTxt;
     private Wave _waveManager;
-    private int CurrentLevel = -1;
-
+    private int ArrayCurrentLevel = -1;
+    private int CurrentLevel = 0;
     private void Start()
     {
         _waveManager = FindObjectOfType<Wave>();
-        int tempInt = CurrentLevel + 1;
-        _waveTxt.text = $"Wave {tempInt.ToString()}/{_waveManager.WaveAmountCounter()}";
+        _waveTxt.text = $"Wave {CurrentLevel.ToString()}/{_waveManager.WaveAmountCounter()}";
     }
 
     public void NextWave()
     {
-        if(_waveManager.EnemiesAlive == 0)
+        if(_waveManager.EnemiesAlive == 0 )
         {
+            ArrayCurrentLevel++;
             CurrentLevel++;
-            int tempInt = CurrentLevel + 1;
-            //_waveTxt.text = "Wave " + CurrentLevel.ToString() + "/" + _waveManager.WaveAmountCounter();
-            _waveTxt.text = $"Wave {tempInt.ToString()}/{_waveManager.WaveAmountCounter()}";
-
-            print(CurrentLevel);
-            _waveManager.SpawnWave(CurrentLevel);
+            if (ArrayCurrentLevel == _waveManager.WaveAmountCounter())
+            {
+                WinLevel();
+                return;
+            }
+            _waveTxt.text = $"Wave {CurrentLevel.ToString()}/{_waveManager.WaveAmountCounter()}";
+            _waveManager.SpawnWave(ArrayCurrentLevel);
+            print("Currentl level " + CurrentLevel);
+            print("WaveAmount " + _waveManager.WaveAmountCounter());
         }
         else
         {
@@ -36,6 +39,6 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
-
+        print("Won the game poggers");
     }
 }

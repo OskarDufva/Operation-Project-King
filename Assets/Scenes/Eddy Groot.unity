@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 284332939}
   - component: {fileID: 284332938}
   m_Layer: 5
-  m_Name: BrightnessTxt
+  m_Name: HealthBarTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 880535439}
   - component: {fileID: 880535440}
   m_Layer: 5
-  m_Name: BrightnessSensitivitySlider
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2170,10 +2170,6 @@ MonoBehaviour:
     - Enemy: {fileID: 2198106561285086546, guid: 0507381dbe2518d4a9bbec27fd78522d, type: 3}
       SpawnDelay: 3
       AmountOfEnemies: 1
-      BreakTime: 10
-    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
-      SpawnDelay: 1
-      AmountOfEnemies: 5
       BreakTime: 0
   - WaveName: wave 2
     Enemies:
@@ -2184,10 +2180,6 @@ MonoBehaviour:
     - Enemy: {fileID: 2198106561285086546, guid: 0507381dbe2518d4a9bbec27fd78522d, type: 3}
       SpawnDelay: 3
       AmountOfEnemies: 1
-      BreakTime: 10
-    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
-      SpawnDelay: 1
-      AmountOfEnemies: 5
       BreakTime: 0
 --- !u!1 &2077130086
 GameObject:
