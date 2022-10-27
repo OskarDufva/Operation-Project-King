@@ -10,8 +10,6 @@ public class GridSystem : MonoBehaviour
  
     [SerializeField] private TileScript _towerTile, _enemyTile;
  
-    [SerializeField] private Transform _cam;
- 
     private Dictionary<Vector2, TileScript> _tiles;
  
     void Start() 
@@ -37,8 +35,6 @@ public class GridSystem : MonoBehaviour
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
- 
-        _cam.transform.position = new Vector3((float)_width/2 -0.5f, (float)_height / 2 - 0.5f,-5);
     }
  
     public TileScript GetTileAtPosition(Vector2 pos) 
