@@ -13,15 +13,10 @@ public class Wave : MonoBehaviour
 
     void Start()
     {
-        SpawnWave(0);
-    }
-
-    void Update()
-    {
 
     }
 
-    private void SpawnWave(int waveCount)
+    public void SpawnWave(int waveCount)
     {
         var x = WaveSpawn(_waveList[waveCount]);
         StartCoroutine(x);
@@ -31,15 +26,12 @@ public class Wave : MonoBehaviour
     {
         for (int i = 0; i < EnemyData.Enemies.Length; i++)
         {
-            
-            Debug.Log(EnemyData.Enemies[i]);
-
             for (int g = 0; g < EnemyData.Enemies[i].AmountOfEnemies; g++)
             {
-                
-                Instantiate(EnemyData.Enemies[i].Enemy, SpawnPoint.transform.position, Quaternion.identity);
                 yield return new WaitForSeconds(EnemyData.Enemies[i].SpawnDelay);
+                Instantiate(EnemyData.Enemies[i].Enemy, SpawnPoint.transform.position, Quaternion.identity);
             }
+            yield return new WaitForSeconds(EnemyData.Enemies[i].BreakTime);
             
         }
     }

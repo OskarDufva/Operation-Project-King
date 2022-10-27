@@ -16,6 +16,7 @@ public struct EnemyData
     public GameObject Enemy;
     public float SpawnDelay;
     public int AmountOfEnemies;
+    public float BreakTime;
 }
 
 [System.Serializable]

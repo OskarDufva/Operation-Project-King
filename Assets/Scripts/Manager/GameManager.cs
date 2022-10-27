@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Wave _waveManager;
+
+    private int CurrentLevel = -1;
+
+    private void Start()
     {
-        
+        _waveManager = FindObjectOfType<Wave>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NextWave()
     {
-        
+        CurrentLevel++;
+        print(CurrentLevel);
+        _waveManager.SpawnWave(CurrentLevel);
     }
 
     public void WinLevel()
