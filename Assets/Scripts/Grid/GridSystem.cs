@@ -8,7 +8,7 @@ public class GridSystem : MonoBehaviour
 
     //A variable to decide how large the grid will be, width being it's with and height being it's height.
  
-    [SerializeField] private TileScript _tilePrefab;
+    [SerializeField] private TileScript _towerTile, _enemyTile;
  
     [SerializeField] private Transform _cam;
  
@@ -26,12 +26,12 @@ public class GridSystem : MonoBehaviour
         {
             for (int y = 0; y < _height; y++) 
             {
-                var spawnedTile = Instantiate(_tilePrefab, new Vector3(x, -1, y), Quaternion.identity);
+                var walkingLine = Instantiate(_enemyTile, new Vector3(x, 0, 7), Quaternion.identity);
+                var spawnedTile = Instantiate(_towerTile, new Vector3(x, 0, y), Quaternion.identity);
+                walkingLine.name = $"Walking Line Part {x}, {y}";
                 spawnedTile.name = $"Tile {x} {y}";
- 
-                var isOffset = (x + y) % 2 == 1;
 
-                spawnedTile.Init(isOffset);
+                spawnedTile.Init(x,y);
  
  
                 _tiles[new Vector2(x, y)] = spawnedTile;

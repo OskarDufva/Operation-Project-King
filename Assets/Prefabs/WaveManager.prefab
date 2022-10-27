@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9060075804461814327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9060075804461814325}
+  - component: {fileID: 9060075804461814324}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9060075804461814325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9060075804461814327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 520.86725, y: 270.82196, z: 11.523942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9060075804461814324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9060075804461814327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4e096d0d23a604ab6316e5f4048b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 0}
+  gameManager: {fileID: 0}
+  EnemiesAlive: 0
+  _waveList:
+  - WaveName: wave 1
+    Enemies:
+    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
+      SpawnDelay: 1
+      AmountOfEnemies: 4
+      BreakTime: 0
+    - Enemy: {fileID: 2198106561285086546, guid: 0507381dbe2518d4a9bbec27fd78522d, type: 3}
+      SpawnDelay: 3
+      AmountOfEnemies: 1
+      BreakTime: 0
+  - WaveName: wave 2
+    Enemies:
+    - Enemy: {fileID: 6746843630859508590, guid: 0e7817fdb692c8641951af2263cc265e, type: 3}
+      SpawnDelay: 1
+      AmountOfEnemies: 4
+      BreakTime: 0
+    - Enemy: {fileID: 2198106561285086546, guid: 0507381dbe2518d4a9bbec27fd78522d, type: 3}
+      SpawnDelay: 3
+      AmountOfEnemies: 1
+      BreakTime: 0
