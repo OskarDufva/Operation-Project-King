@@ -5,20 +5,34 @@ using UnityEngine.UI;
 
 public class King : MonoBehaviour
 {
-    public float healthAmount = 100;
-    public Image healthBar;
+    public float maxHealth = 100;
+    public float currentHealth;
+    //public Image healthBar;
 
-    private void Update()
+
+    private void Start()
     {
-        if (healthAmount <= 0)
+        maxHealth = currentHealth;
+    }
+    void Update()
+    {
+        if (currentHealth <= 0)
         {
-
+            Debug.Log("Dead");
+            //GameOver();   
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Enemy Enemy = collision.gameObject.GetComponent<Enemy>();
+        if (Enemy != null)
+        {
+            TakeDamage(20);
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
-        healthAmount -= damage;
-        //healthBar = fillAmount = healthAmount / 100;
+        currentHealth -= damage;
     }
 }
