@@ -81,7 +81,7 @@ public class MenuController : MonoBehaviour
     //When pressing yes button on dialogScreen NewGameDialogScreen will load a new game
     public void NewGameDialogYes()
     {
-        SceneManager.LoadScene(NewGameLevel);
+        SceneManager.LoadScene(1);
     }
 
     public void LoadGameDialogYes()
