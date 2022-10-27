@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //CurrencySystem.Gold += worth;
+        Destroy(this.gameObject);
     }
 
 }
