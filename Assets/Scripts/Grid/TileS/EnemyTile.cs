@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoints : MonoBehaviour
+public class EnemyTile : TileScript
 {
-    public Transform[] waypoints;
 
 }
