@@ -5,14 +5,17 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] TMP_Text _waveTxt;
+    [SerializeField] TextMeshProUGUI _waveTxt;
+    [SerializeField] TextMeshProUGUI _speedTxt;
+
     private Wave _waveManager;
     private int ArrayCurrentLevel = -1;
     private int CurrentLevel = 0;
-
+    private int _gameSpeed = 1;
 
     public static bool GameIsPaused;
 
+    //At start of the game find the wave manager and sets the text of the waves in the hud.
     private void Start()
     {
         _waveManager = FindObjectOfType<Wave>();
@@ -27,14 +30,6 @@ public class GameManager : MonoBehaviour
             GameIsPaused = !GameIsPaused;
             PauseGame();
         }
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            NormalGameSpeed();
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            SpeedUpGame();
-        }
     }
 
     // if game is paused time scale equals 0 and if game isnt paused time scale equals normal speed. 
@@ -48,17 +43,33 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-
     }
 
-    void NormalGameSpeed()
+    public void SpeedChangeBtn()
     {
-        Time.timeScale = 1;
-    }
+        if (_gameSpeed == 1)
+        {
+            _gameSpeed = 2;
+            _speedTxt.text = 2 + "X >>";
+            ChangeSpeed();
+        }
+        else if (_gameSpeed == 2)
+        {
+            _gameSpeed = 4;
+            _speedTxt.text = 4 + "X >>";
+            ChangeSpeed();
 
-    void SpeedUpGame()
+        }
+        else if (_gameSpeed == 4)
+        {
+            _gameSpeed = 1;
+            _speedTxt.text = 1 + "X >>";
+            ChangeSpeed();
+        }
+    }
+    private void ChangeSpeed()
     {
-        Time.timeScale = 2;
+        Time.timeScale = _gameSpeed;
     }
 
     public void NextWave()

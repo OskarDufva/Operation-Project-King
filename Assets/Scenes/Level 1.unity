@@ -944,7 +944,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.85
+  m_fontSize: 9.55
   m_fontSizeBase: 20.23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1463,7 +1463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 941706190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1800955500}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpeedChangeBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &941706190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,7 +1790,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.2
+  m_fontSize: 17.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2367,7 +2379,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.9
+  m_fontSize: 12.2
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2566,6 +2578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waveTxt: {fileID: 2103310574}
+  _speedTxt: {fileID: 1892877692}
 --- !u!4 &1800955501
 Transform:
   m_ObjectHideFlags: 0
@@ -2816,7 +2829,7 @@ GameObject:
   - component: {fileID: 1892877693}
   - component: {fileID: 1892877692}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SpeedBtnTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2889,7 +2902,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.85
+  m_fontSize: 9.55
   m_fontSizeBase: 20.23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3121,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917148325507587121, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917148325507587121, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3153,39 +3166,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.65
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 10.04
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.89239913
+      value: 0.71104497
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23911765
+      value: 0.7031465
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3696438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09904577
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 30
+      value: 89.36
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917148326272916815, guid: aeb4131b310f76f4e860e744b097eac9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3288,7 +3301,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
+  m_fontSize: 17.35
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
