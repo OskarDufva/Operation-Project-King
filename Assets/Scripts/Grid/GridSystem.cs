@@ -12,7 +12,7 @@ public class GridSystem : MonoBehaviour
  
     private Dictionary<Vector2, TileScript> _tiles;
  
-    void Start() 
+    void Awake() 
     {
         GenerateGrid();
     }
@@ -35,6 +35,10 @@ public class GridSystem : MonoBehaviour
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
+    }
+    void Update ()
+    {
+        
     }
  
     public TileScript GetTileAtPosition(Vector2 pos) 
