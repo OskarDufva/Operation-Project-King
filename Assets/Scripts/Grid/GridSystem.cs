@@ -36,6 +36,10 @@ public class GridSystem : MonoBehaviour
             }
         }
     }
+    void Update ()
+    {
+        
+    }
  
     public TileScript GetTileAtPosition(Vector2 pos) 
     {
