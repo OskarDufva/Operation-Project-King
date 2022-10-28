@@ -69,9 +69,9 @@ public class CameraController : MonoBehaviour
     {
         float rotation = 0;
         if (Input.GetKey(KeyCode.E))
-            rotation -= 1;
+            rotation -= 45;
         if (Input.GetKey(KeyCode.Q))
-            rotation += 1;
+            rotation += 45;
         transform.Rotate(0, rotation * rotateSpeed * Time.deltaTime, 0);
     }
 }
