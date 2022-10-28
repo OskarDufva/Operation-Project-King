@@ -3345,6 +3345,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -327980329741348035, guid: 5103c8b3d91228f479de9646f6559892, type: 3}
+      propertyPath: _baseColor.b
+      value: 0.227451
+      objectReference: {fileID: 0}
+    - target: {fileID: -327980329741348035, guid: 5103c8b3d91228f479de9646f6559892, type: 3}
+      propertyPath: _baseColor.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: -327980329741348035, guid: 5103c8b3d91228f479de9646f6559892, type: 3}
+      propertyPath: _baseColor.r
+      value: 0.79215693
+      objectReference: {fileID: 0}
     - target: {fileID: 4543352851896742382, guid: 5103c8b3d91228f479de9646f6559892, type: 3}
       propertyPath: m_Name
       value: TowerTile

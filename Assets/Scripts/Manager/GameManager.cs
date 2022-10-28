@@ -9,10 +9,56 @@ public class GameManager : MonoBehaviour
     private Wave _waveManager;
     private int ArrayCurrentLevel = -1;
     private int CurrentLevel = 0;
+
+
+    public static bool GameIsPaused;
+
     private void Start()
     {
         _waveManager = FindObjectOfType<Wave>();
         _waveTxt.text = $"Wave {CurrentLevel.ToString()}/{_waveManager.WaveAmountCounter()}";
+    }
+
+    void Update()
+    {
+        // when space is pressed pause the game, if you press space again resume to normalspeed. 
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            GameIsPaused = !GameIsPaused;
+            PauseGame();
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            NormalGameSpeed();
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            SpeedUpGame();
+        }
+    }
+
+    // if game is paused time scale equals 0 and if game isnt paused time scale equals normal speed. 
+    void PauseGame()
+    {
+        if (GameIsPaused)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
+    }
+
+    void NormalGameSpeed()
+    {
+        Time.timeScale = 1;
+    }
+
+    void SpeedUpGame()
+    {
+        Time.timeScale = 2;
     }
 
     public void NextWave()
