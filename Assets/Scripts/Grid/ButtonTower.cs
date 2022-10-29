@@ -22,8 +22,9 @@ public class ButtonTower : MonoBehaviour
         Debug.Log("Update");
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        LayerMask mask = LayerMask.GetMask("Tower");
         Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red);
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, mask))
         {
             Transform objectHit = hit.transform;
             movingTower.transform.position = hit.point;
